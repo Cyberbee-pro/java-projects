@@ -10,8 +10,8 @@ import java.util.*;
  * @author Cyberbee
  */
 public class strfunc {
-    public static String a[]= null;
-    public static String b[]= null;
+    public static String a[]=new String[1];
+    public static String b[]=new String[1];
     
     
     public static final Scanner sc = new Scanner(System.in);
@@ -31,13 +31,14 @@ public class strfunc {
     */
      public static String[] inputArrStr(String[] z,int POpt)
     {
-        int i;
-        sizeRedef(POpt);
-         System.out.println("ur back");
-        for(i=0;i<z.length;i++)
+        int i,size;
+        System.out.print("Enter size for array:");
+        size=sc.nextInt();
+        sc.next();
+        for(i=0;i<size;i++)
         {
             System.out.println("Enter Data " + (i+1) + ":");
-            z[i]=sc.nextLine();
+            z[i]=z+sc.nextLine();
         }
         return z;
     }
